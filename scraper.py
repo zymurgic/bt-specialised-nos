@@ -45,7 +45,7 @@ def trawlhtml (url):
         tds = tr.cssselect("td") 
         if len(tds)>1:
             trimmed = tds[0].text_content().replace("(e)","").replace("(f)","").replace(" ","")
-            trimmedcg = tds[1].text_content().replace(" ","").replace("3GV","")
+            trimmedcg = ''.join(tds[1].text_content().replace(" ","").replace("3GV","").split())
             if (trimmed.isdigit() and len(trimmed)>3):
                 data = { 
                     'cns' : trimmed, 
@@ -59,7 +59,7 @@ for url in urls:
 
 for t in s.findAll('text'):
     if (t.text != " ") and (t.text != "Code") and (t.text !='Type of Call') and (len(t.text)<13):
-        trimmed = t.text.replace(" ","").replace("3GV","")
+        trimmed = ''.join(t.text.replace(" ","").replace("3GV","").split())
 #        if trimmed.startswith("0") and trimmed.isdigit():
         if trimmed.isdigit() and (len(trimmed)>3):
          cns=trimmed
