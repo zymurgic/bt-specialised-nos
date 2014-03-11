@@ -1,0 +1,7 @@
+Attempt to decode BT's dialled number to chargeband mapping, by scraping a PDF of the information. At present, this only looks at NTS, Mobile and other Premium-rate services. Does not look at international chargebands, which gets rather complicated, nor does it deal with geographic numbers where you may be on a tarriff that gives cheaper local geographic calling than national geographic calling.
+
+This data is, by the look of it Copyright BT, as the footnote on the PDF currently states.
+
+Other similar files that may be worthy of scraping are Virgin Media's equivalent, though they have their some of their own chargebands:
+
+http://allyours.virginmedia.com/pdf/uk_non-geographical_calls_a.pdf
