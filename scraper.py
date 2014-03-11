@@ -18,7 +18,7 @@ from BeautifulSoup import BeautifulSoup
 pdfurl = "http://www.productsandservices.bt.com/consumer/consumerProducts/pdf/SpecialisedNos.pdf"
 a = scraperwiki.scrape(pdfurl)
 s = BeautifulSoup(scraperwiki.pdftoxml(a))
-print s
+# print s
 name = None
 all = []
 data = {}
